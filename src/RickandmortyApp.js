@@ -31,6 +31,11 @@ export class RickandmortyApp extends LitElement {
         flex-grow: 1;
       }
 
+      .container {
+        display: flex;
+        border: 1px solid black;
+      }
+
       .logo > svg {
         margin-top: 36px;
         animation: app-logo-spin infinite 20s linear;
@@ -62,9 +67,21 @@ export class RickandmortyApp extends LitElement {
     }
 
     render() {
-        return html `
+            return html `
       <data-fetch @info="${this._info}"></data-fetch>
-      <render-fetch .data="${this.data}"></render-fetch>
+      <h1>Characters of Rick and Morty!!!</h1>
+      <div class="container">
+      <h1>Characters of Rick and Morty!!!</h1>
+        ${this.data.map((item) => html `
+      <h1>Characters of Rick and Morty!!!</h1>
+          <render-fetch
+          .image="${item.image}"
+          .id="${item.id}"
+          .name="${item.name}"
+          .location="${item.location}">
+          </render-fetch>
+      `)}
+      </div>
     `;
     }
 
