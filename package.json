@@ -1,0 +1,19 @@
+{
+  "name": "rickandmorty-app",
+  "version": "0.0.0",
+  "description": "Webcomponent rickandmorty-app following open-wc recommendations",
+  "author": "rickandmorty-app",
+  "license": "MIT",
+  "scripts": {
+    "start": "es-dev-server --app-index index.html --node-resolve --open --watch"
+  },
+  "dependencies": {
+    "data-fetch": "git+https://github.com/victor-hpm/data-fetch.git",
+    "lit-element": "^2.0.1",
+    "lit-html": "^1.0.0",
+    "render-fetch": "git+https://github.com/victor-hpm/render-fetch.git"
+  },
+  "devDependencies": {
+    "es-dev-server": "^1.5.0"
+  }
+}
